@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  flask_app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - MONGODB_HOST=mongodb
+      - CHROMADB_HOST=chromadb
+      - OLLAMA_HOST=http://ollama:11434
+      - OLLAMA_EMBEDDING_MODEL_NAME=nomic-embed-text
+    depends_on:
+      - mongodb
+      - chromadb
+      - ollama
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:latest
+    ports:
+      - "8001:8000"
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  ollama_data:

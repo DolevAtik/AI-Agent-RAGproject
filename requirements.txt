@@ -1,0 +1,11 @@
+Flask
+Pydantic
+PyPDF2
+chromadb
+pymongo
+python-dotenv
+requests
+ollama
+flask-swagger-ui
+pypdf
+flask-cors
