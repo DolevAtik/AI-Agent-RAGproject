@@ -4,7 +4,7 @@ def swagger_spec():
     return jsonify({
         "openapi": "3.0.0",
         "info": {
-            "title": "Dolev Atik & Yahav Vituri , AI RAG Agent API  ",
+            "title": AI RAG Agent API  ",
             "version": "1.0.0",
             "description": "API for an AI agent capable of answering questions based on academic research papers using RAG."
         },
