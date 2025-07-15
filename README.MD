@@ -76,4 +76,3 @@ The Swagger interface allows you to easily interact with the API:
 
 
 ## submitted by :
-### Dolev Atik & Yahav Vituri
