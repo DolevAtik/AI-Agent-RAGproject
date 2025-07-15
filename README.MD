@@ -75,4 +75,3 @@ The Swagger interface allows you to easily interact with the API:
 ## **Happy building! 🚀**
 
 
-## submitted by :
