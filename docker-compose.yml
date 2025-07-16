@@ -30,9 +30,20 @@ services:
   ollama:
     image: ollama/ollama
     ports:
-      - "11434:11434"
+    - "11434:11434"
     volumes:
-      - ollama_data:/root/.ollama
+    - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+     "/bin/ollama serve & 
+     sleep 10 && 
+     echo '🔄 Pulling nomic-embed-text...' &&
+     ollama pull nomic-embed-text &&
+     echo '✅ Done pulling nomic-embed-text' &&
+     echo '🔄 Pulling mistral...' &&
+     ollama pull mistral &&
+     echo '✅ Done pulling mistral' &&
+     echo '🚀 All models downloaded. Ollama is ready.' "
 
 volumes:
   ollama_data:
