@@ -15,19 +15,14 @@ An AI-powered Flask application using Retrieval-Augmented Generation (RAG) to an
 ---
 
 ## 🚀 Getting Started : 
-- run the scripts by the order :
-```bash
-docker-compose up 
+1. ### run the script :
 ```
-```bash
-docker exec -it ragproject-ollama-1 ollama pull nomic-embed-text
-docker exec -it ragproject-ollama-1 ollama pull mistral
-```
-```bash
 docker-compose up --build
 ```
+2. #### wait a few minutes for ollama to pull the models or pull them before to save time `nomic-embed-text & mistral`
 
-### Once running , access the Link:
+
+3. ### Once all running , access the Link:
 
 ### 👉 [http://localhost:5000/swagger](http://localhost:5000/swagger)
 
@@ -73,5 +68,3 @@ The Swagger interface allows you to easily interact with the API:
 - [Ollama](https://ollama.com) installed locally and running
 ---
 ## **Happy building! 🚀**
-
-
