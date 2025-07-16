@@ -43,7 +43,7 @@ services:
      echo '🔄 Pulling mistral...' &&
      ollama pull mistral &&
      echo '✅ Done pulling mistral' &&
-     echo '🚀 All models downloaded. Ollama is ready.' "
+     echo '🚀 All models downloaded , you can start ! "
 
 volumes:
   ollama_data:
